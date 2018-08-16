@@ -1,4 +1,5 @@
 # Google I/O 2018 Schedule App Teardown
+https://github.com/google/iosched
 
 ### Master Branch
 - Barebones project using Dagger2 dependency injection via Dagger-Application/AppCompatActivity/Fragment classes
