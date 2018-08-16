@@ -15,7 +15,7 @@ https://github.com/google/iosched
 ### Material Branch - TODO
 [Goto Branch](https://github.com/ersin-ertan/iosched_teardown/tree/material)
 - Showcase the Material theme used within app
-- Introduce advanced concepts used like delegation
+- Introduce advanced concepts used like delegation, and dataflow/networking
 
 ### Experimental Branch - TODO
 [Goto Branch](https://github.com/ersin-ertan/iosched_teardown/tree/experimental)
