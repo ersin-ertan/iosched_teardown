@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import ca.ersin.iosched_teardown.R
+import ca.ersin.iosched_teardown.databinding.FragmentParentBinding
 import ca.ersin.shared.Analytics
 import ca.ersin.shared.util.viewModelProvider
 import dagger.android.support.DaggerFragment
@@ -27,7 +27,9 @@ class ParentFragment : DaggerFragment() {
 
         parentFragmentViewModel = viewModelProvider(viewModelFactory)
 
-        return inflater.inflate(R.layout.fragment_parent, null, false)
+        return FragmentParentBinding.inflate(inflater, null, false)
+                .apply { setLifecycleOwner(this@ParentFragment) }
+                .root
     }
 
 }

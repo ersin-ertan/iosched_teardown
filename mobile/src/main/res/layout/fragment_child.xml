@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_bright"
-    android:id="@+id/fragmentChildLinear"
-    android:paddingBottom="8dp"
-    android:paddingTop="8dp"
-    >
 
-    <androidx.appcompat.widget.AppCompatTextView
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="childFragmentViewModel"
+            type="ca.ersin.iosched_teardown.ui.fragment.children.ChildFragmentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/fragmentChildLinear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=">>fragmentChild"
-        android:paddingBottom="8dp"
-        />
+        android:layout_height="match_parent"
+        android:background="@{childFragmentViewModel.backgroundColor}"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
-</LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text=">>fragmentChild"
+            android:onClick="@{(view)->childFragmentViewModel.clicked(view)}"
+            />
+
+    </LinearLayout>
+
+</layout>

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import ca.ersin.iosched_teardown.R
+import ca.ersin.iosched_teardown.databinding.FragmentChildBinding
 import ca.ersin.shared.Analytics
 import ca.ersin.shared.util.viewModelProvider
 import dagger.android.support.DaggerFragment
@@ -26,8 +26,12 @@ class ChildFragment : DaggerFragment() {
         analytics.inc(this::class.java)
 
         childFragmentViewModel = viewModelProvider(viewModelFactory)
+        childFragmentViewModel.setInitialColor(context!!)
 
-        return inflater.inflate(R.layout.fragment_child, null, false)
+        return FragmentChildBinding.inflate(inflater, null, false).apply {
+            childFragmentViewModel = this@ChildFragment.childFragmentViewModel
+            setLifecycleOwner(this@ChildFragment)
+        }.root
     }
 
 }

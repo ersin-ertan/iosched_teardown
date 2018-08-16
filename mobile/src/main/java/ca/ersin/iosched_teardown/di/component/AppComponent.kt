@@ -1,7 +1,7 @@
 package ca.ersin.iosched_teardown.di.component
 
 import ca.ersin.iosched_teardown.App
-import ca.ersin.iosched_teardown.di.ActivityBindingModule
+import ca.ersin.iosched_teardown.di.module.ActivityBindingModule
 import ca.ersin.iosched_teardown.di.module.AppModule
 import ca.ersin.shared.di.ViewModelModule
 import dagger.Component

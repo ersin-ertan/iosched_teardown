@@ -1,7 +1,7 @@
-package ca.ersin.iosched_teardown.di
+package ca.ersin.iosched_teardown.di.module
 
-import ca.ersin.iosched_teardown.di.module.FragmentModule
 import ca.ersin.iosched_teardown.ui.MainActivity
+import ca.ersin.iosched_teardown.ui.MainActivityModule
 import ca.ersin.shared.di.scope.ActivityScoped
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -11,7 +11,7 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBindingModule {
 
     @ActivityScoped
-    @ContributesAndroidInjector(modules = [FragmentModule::class])
+    @ContributesAndroidInjector(modules = [MainActivityModule::class, FragmentModule::class])
     internal abstract fun mainActivity(): MainActivity
 
 }
