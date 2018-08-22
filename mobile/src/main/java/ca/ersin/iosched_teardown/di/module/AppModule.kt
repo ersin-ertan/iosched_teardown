@@ -1,9 +1,10 @@
 package ca.ersin.iosched_teardown.di.module
 
 import android.content.Context
-import android.content.SharedPreferences
 import ca.ersin.iosched_teardown.App
 import ca.ersin.shared.Analytics
+import ca.ersin.shared.data.prefs.PreferenceStorage
+import ca.ersin.shared.data.prefs.SharedPreferenceStorage
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -12,14 +13,14 @@ import javax.inject.Singleton
 class AppModule {
 
     @Provides
-    fun providesContext(application: App): Context {
-        return application.applicationContext
-    }
+    fun providesContext(application: App): Context =
+            application.applicationContext
+
 
     @Singleton
     @Provides
-    fun providesPreferenceStorage(context: Context): SharedPreferences =
-            context.getSharedPreferences("myApp", Context.MODE_PRIVATE)
+    fun providesPreferenceStorage(context: Context): PreferenceStorage =
+            SharedPreferenceStorage(context)
 
     @Singleton
     @Provides

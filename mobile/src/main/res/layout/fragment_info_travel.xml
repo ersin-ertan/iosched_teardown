@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/list_divider"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_normal"
+        android:showDividers="middle">
+
+        <ca.ersin.iosched_teardown.widget.CollapsibleCard
+            android:id="@+id/directions_parking_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardDescription="@string/travel_directions_description"
+            app:cardTitle="@string/travel_directions_title" />
+
+        <ca.ersin.iosched_teardown.widget.CollapsibleCard
+            android:id="@+id/shuttle_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardDescription="@string/travel_shuttle_description"
+            app:cardTitle="@string/travel_shuttle_title" />
+
+        <ca.ersin.iosched_teardown.widget.CollapsibleCard
+            android:id="@+id/public_transportation_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardDescription="@string/travel_public_transportation_description"
+            app:cardTitle="@string/travel_public_transportation_title" />
+
+        <ca.ersin.iosched_teardown.widget.CollapsibleCard
+            android:id="@+id/biking_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardDescription="@string/travel_biking_description"
+            app:cardTitle="@string/travel_biking_title" />
+
+        <ca.ersin.iosched_teardown.widget.CollapsibleCard
+            android:id="@+id/ride_sharing_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardDescription="@string/travel_ride_sharing_description"
+            app:cardTitle="@string/travel_ride_sharing_title" />
+
+        <ca.ersin.iosched_teardown.widget.CollapsibleCard
+            android:id="@+id/carpooling_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardDescription="@string/travel_carpool_parking_description"
+            app:cardTitle="@string/travel_carpool_parking_title" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/info_transport_footer" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

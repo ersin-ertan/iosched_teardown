@@ -12,7 +12,7 @@ https://github.com/google/iosched
 [Goto Branch](https://github.com/ersin-ertan/iosched_teardown/tree/databinding)
 - Apply Databinding to layouts and Viewmodels allowing LiveObjects and observers to react based on changes
 
-### Material Branch - TODO
+### Material Branch
 [Goto Branch](https://github.com/ersin-ertan/iosched_teardown/tree/material)
 - Showcase the Material theme used within app
 - Introduce advanced concepts used like delegation

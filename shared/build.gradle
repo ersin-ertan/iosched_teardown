@@ -17,12 +17,35 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        buildConfigField "String", "CONFERENCE_TIMEZONE", "\"${conference_timezone}\""
+        buildConfigField "String", "CONFERENCE_DAY1_START", "\"${conference_day1_start}\""
+        buildConfigField "String", "CONFERENCE_DAY1_END", "\"${conference_day1_end}\""
+        buildConfigField "String", "CONFERENCE_DAY2_START", "\"${conference_day2_start}\""
+        buildConfigField "String", "CONFERENCE_DAY2_END", "\"${conference_day2_end}\""
+        buildConfigField "String", "CONFERENCE_DAY3_START", "\"${conference_day3_start}\""
+        buildConfigField "String", "CONFERENCE_DAY3_END", "\"${conference_day3_end}\""
+
+        buildConfigField "String",
+                "BOOTSTRAP_CONF_DATA_FILENAME",
+                "\"${bootstrap_conference_data_filename}\""
+
+        buildConfigField "String",
+                "CONFERENCE_WIFI_OFFERING_START",
+                "\"${conference_wifi_offering_start}\""
+
+
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "REGISTRATION_ENDPOINT_URL", "\"https://events-d07ac.appspot.com/_ah/api/registration/v1/register\""
+            buildConfigField "String", "CONFERENCE_DATA_URL", "\"https://firebasestorage.googleapis.com/v0/b/io2018-festivus-prod/o/sessions.json?alt=media&token=89140adf-e228-45a5-9ae3-8ed01547166a\""
+        }
+        debug {
+            buildConfigField "String", "REGISTRATION_ENDPOINT_URL", "\"https://events-dev-62d2e.appspot.com/_ah/api/registration/v1/register\""
+            buildConfigField "String", "CONFERENCE_DATA_URL", "\"https://firebasestorage.googleapis.com/v0/b/io2018-festivus/o/sessions.json?alt=media&token=019af2ec-9fd1-408e-9b86-891e4f66e674\""
         }
     }
 

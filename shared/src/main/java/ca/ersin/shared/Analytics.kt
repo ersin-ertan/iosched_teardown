@@ -7,7 +7,7 @@ import kotlin.properties.Delegates
 class Analytics(val context: Context) {
 
     val listeners: MutableList<CounterListener> = mutableListOf()
-    var counter: Long by Delegates.observable(0L) { prop, old, new ->
+    var counter: Long by Delegates.observable(0L) { _, _, new ->
         listeners.forEach {
             it.onCounterChanged(new) }
     }
